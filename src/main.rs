@@ -6,9 +6,8 @@ use tokio::time::sleep;
 
 async fn handle_connections<I, F>(connections: I)
 where
-    <F as Future>::Output: Send + 'static,
     I: IntoIterator<Item = F>,
-    F: Future + Send + 'static,
+    F: Future<Output: Send + 'static> + Send + 'static,
 {
     let mut handles = vec![];
     for connection in connections {
