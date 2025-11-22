@@ -6,3 +6,5 @@ edition = "2024"
 [dependencies]
 tokio = { version = "1.40", features = ["full"] }
 futures = "0.3"
+waker-fn = "1.2.0"
+smol = "2.0.2"

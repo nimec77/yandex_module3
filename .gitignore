@@ -1,1 +1,8 @@
 /target
+
+#IDE
+.idea
+.vscode
+
+# Cargo
+Cargo.lock
